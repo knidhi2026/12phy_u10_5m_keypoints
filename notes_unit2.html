@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit 2 - Current Electricity Detailed Notes</title>
+    <style>
+        body { font-family: 'Times New Roman', Times, serif; line-height: 1.7; color: #1a1a1a; padding: 40px; background-color: #f0f2f5; }
+        .content { max-width: 950px; margin: auto; background: white; padding: 50px; border-radius: 4px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        h1 { color: #003366; text-align: center; border-bottom: 3px double #003366; padding-bottom: 15px; text-transform: uppercase; }
+        h2 { color: #c0392b; margin-top: 40px; border-bottom: 1px solid #ddd; padding-bottom: 5px; font-size: 1.4em; }
+        .formula-block { background: #f9f9f9; border: 1px solid #ccc; padding: 15px; margin: 20px 0; font-family: "Courier New", monospace; font-weight: bold; text-align: center; font-size: 1.1em; }
+        .derivation-step { margin-left: 20px; font-style: italic; color: #555; }
+        .diagram-label { background: #fff3e0; border-left: 5px solid #ff9800; padding: 10px; margin: 20px 0; font-size: 0.95em; color: #444; }
+        .back-link { text-decoration: none; color: #003366; font-weight: bold; border: 1px solid #003366; padding: 8px 15px; border-radius: 3px; transition: 0.3s; }
+        .back-link:hover { background: #003366; color: white; }
+        b { color: #000; }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <a href="index.html" class="back-link">← Return to Portal</a>
+        <h1>Unit 2: Current Electricity (Long Answer Study Guide)</h1>
+
+        <h2>1. Microscopic Model of Current</h2>
+        <p>Consider a conductor with cross-sectional area <b>A</b> and an electric field <b>E</b> applied from right to left. Suppose there are <b>n</b> electrons per unit volume (number density) moving with a drift velocity <b>v<sub>d</sub></b>.</p>
+        <div class="diagram-label"><b>[Insert Figure: Microscopic model of current showing a section of conductor with length dx and area A]</b></div>
+        
+        <ul>
+            <li>The electrons move a distance <b>dx = v<sub>d</sub> dt</b> in a small time interval <b>dt</b>.</li>
+            <li>The number of electrons in the volume element (<b>V = A dx</b>) is <b>n A dx</b>.</li>
+            <li>Substituting <b>dx</b>: Total number of electrons = <b>n A v<sub>d</sub> dt</b>.</li>
+            <li>Total charge in this volume: <b>dQ = (number of electrons) × (charge of an electron) = (n A v<sub>d</sub> dt)e</b>.</li>
+            <li>Current is defined as the rate of flow of charge: <b>I = dQ / dt</b>.</li>
+        </ul>
+        <div class="formula-block">I = n e A v<sub>d</sub></div>
+
+        <h2>2. Microscopic Form of Ohm's Law</h2>
+        <p>Current density <b>J</b> is the current per unit area of cross-section: <b>J = I / A</b>. From the above derivation, <b>J = n e v<sub>d</sub></b>.</p>
+        <p class="derivation-step">Substituting the expression for drift velocity: <b>v<sub>d</sub> = (eτ / m) E</b></p>
+        <ul>
+            <li><b>J = n e (eτ / m) E = (n e² τ / m) E</b></li>
+            <li>The quantity <b>(n e² τ / m)</b> is a constant for a given material at a given temperature, called <b>Conductivity (σ)</b>.</li>
+        </ul>
+        <div class="formula-block">J = σE</div>
+        <p>In vector form, <b>J = σE</b>. This is the microscopic form of Ohm's Law.</p>
+
+        <h2>3. Macroscopic Form of Ohm's Law</h2>
+        <p>Consider a segment of wire of length <b>l</b> and cross-sectional area <b>A</b>. If a potential difference <b>V</b> is applied, the electric field is <b>E = V / l</b>.</p>
+        <p class="derivation-step">Using the microscopic law <b>J = σE</b>:</p>
+        <ul>
+            <li>Substitute <b>J = I / A</b> and <b>E = V / l</b>: <b>I / A = σ (V / l)</b></li>
+            <li>Rearranging for V: <b>V = I (l / σA)</b></li>
+            <li>The term <b>(l / σA)</b> is the resistance <b>R</b> of the conductor.</li>
+        </ul>
+        <div class="formula-block">V = IR</div>
+        <p><b>Limitations:</b> Ohm's law is not a fundamental law. It holds only for "Ohmic" materials where resistance is constant. It fails for non-ohmic devices like vacuum diodes, transistors, and semiconductors where the V-I relationship is non-linear.</p>
+        
+
+        <h2>4. Internal Resistance of a Cell using Voltmeter</h2>
+        <p>The EMF (<b>ε</b>) of a cell is the voltage when no current is drawn. Due to the internal resistance <b>r</b>, the potential difference <b>V</b> across the cell in a closed circuit is less than <b>ε</b>.</p>
+        <div class="diagram-label"><b>[Insert Figure: Circuit showing a cell with internal resistance r, an external resistor R, and a voltmeter]</b></div>
+        
+
+[Image of internal resistance of a cell circuit diagram]
+
+        <ul>
+            <li>In an open circuit, the voltmeter reads <b>ε</b>.</li>
+            <li>When resistance <b>R</b> is connected, current <b>I = ε / (R + r)</b>.</li>
+            <li>The potential difference across <b>R</b> is <b>V = IR</b>.</li>
+            <li>Substituting <b>I</b>: <b>V = εR / (R + r)</b>.</li>
+            <li>Rearranging: <b>V(R + r) = εR</b> &rArr; <b>VR + Vr = εR</b> &rArr; <b>Vr = εR - VR</b>.</li>
+        </ul>
+        <div class="formula-block">r = R [ (ε - V) / V ]</div>
+
+        <h2>5. Kirchhoff’s Rules</h2>
+        <p><b>I. Junction Rule (Current Rule):</b> The algebraic sum of currents meeting at any junction in a circuit is zero (<b>ΣI = 0</b>). Currents entering are positive; currents leaving are negative. This is based on <b>Conservation of Charge</b>.</p>
+        <p><b>II. Loop Rule (Voltage Rule):</b> In any closed part of a circuit, the algebraic sum of the products of current and resistance (IR) is equal to the algebraic sum of the EMFs in that loop (<b>ΣIR = Σε</b>). This is based on <b>Conservation of Energy</b>.</p>
+
+        <h2>6. Wheatstone’s Bridge Balance Condition</h2>
+        <p>Applying Kirchhoff's rules to a bridge with resistances <b>P, Q, R, S</b> and galvanometer <b>G</b>. Let <b>I<sub>G</sub></b> be the galvanometer current.</p>
+        <div class="diagram-label"><b>[Insert Figure: Wheatstone’s bridge circuit diagram]</b></div>
+        
+
+[Image of Wheatstone's bridge]
+
+        <ul>
+            <li>At Junction B: <b>I<sub>1</sub> - I<sub>G</sub> - I<sub>3</sub> = 0</b></li>
+            <li>At Junction D: <b>I<sub>2</sub> + I<sub>G</sub> - I<sub>4</sub> = 0</b></li>
+            <li>For Loop ABDA: <b>I<sub>1</sub>P + I<sub>G</sub>G - I<sub>2</sub>R = 0</b></li>
+            <li>The bridge is balanced when <b>I<sub>G</sub> = 0</b>.</li>
+            <li>This implies <b>I<sub>1</sub> = I<sub>3</sub></b> and <b>I<sub>2</sub> = I<sub>4</sub></b>.</li>
+            <li>The loop equation becomes <b>I<sub>1</sub>P = I<sub>2</sub>R</b>.</li>
+            <li>Applying loop rule to BCDB: <b>I<sub>3</sub>Q - I<sub>4</sub>S - I<sub>G</sub>G = 0</b> &rArr; <b>I<sub>1</sub>Q = I<sub>2</sub>S</b>.</li>
+        </ul>
+        <div class="formula-block">P / Q = R / S</div>
+
+        <h2>7. Meter Bridge (Determination of Unknown Resistance)</h2>
+        <p>The meter bridge consists of a 1m manganin wire. An unknown resistance <b>P</b> is in the left gap and a known <b>Q</b> is in the right gap.</p>
+        <div class="diagram-label"><b>[Insert Figure: Meter bridge circuit showing gaps, wire AB, and jockey J]</b></div>
+        
+
+[Image of Meter bridge circuit]
+
+        <ul>
+            <li>The jockey is moved to find a null point <b>J</b> where the galvanometer shows zero.</li>
+            <li>Let <b>AJ = l<sub>1</sub></b> and <b>JB = l<sub>2</sub></b>.</li>
+            <li>By Wheatstone’s principle: <b>P / Q = (Resistance of AJ) / (Resistance of JB)</b>.</li>
+            <li>If <b>r'</b> is resistance per unit length: <b>P / Q = (r' l<sub>1</sub>) / (r' l<sub>2</sub>)</b>.</li>
+        </ul>
+        <div class="formula-block">P = Q (l<sub>1</sub> / l<sub>2</sub>)</div>
+
+        <h2>8. Comparison of EMF using Potentiometer</h2>
+        <p>The principle of a potentiometer is that the potential drop is proportional to the length of the wire (<b>V ∝ l</b>).</p>
+        <div class="diagram-label"><b>[Insert Figure: Potentiometer circuit with primary circuit and secondary circuit containing two cells]</b></div>
+        
+        <ul>
+            <li>A constant current <b>I</b> is maintained in the primary circuit.</li>
+            <li>For cell 1 (<b>ε<sub>1</sub></b>), the balancing length is <b>l<sub>1</sub></b>: <b>ε<sub>1</sub> = I r' l<sub>1</sub></b>.</li>
+            <li>For cell 2 (<b>ε<sub>2</sub></b>), the balancing length is <b>l<sub>2</sub></b>: <b>ε<sub>2</sub> = I r' l<sub>2</sub></b>.</li>
+            <li>By dividing the two equations:</li>
+        </ul>
+        <div class="formula-block">ε<sub>1</sub> / ε<sub>2</sub> = l<sub>1</sub> / l<sub>2</sub></div>
+    </div>
+</body>
+</html>
