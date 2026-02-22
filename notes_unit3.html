@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unit 3 · Magnetism · Long Answer Notes (5 marks)</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+      background: #f9fbfd;
+      margin: 0;
+      padding: 20px;
+      color: #1e2b3a;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px 35px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      border-radius: 12px;
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: #0b3b5c;
+      border-bottom: 3px solid #2c7da0;
+      padding-bottom: 10px;
+      margin-top: 0;
+    }
+    h2 {
+      font-size: 1.8rem;
+      color: #1e4a6b;
+      margin: 30px 0 20px 0;
+      background: #e2f0f9;
+      padding: 8px 15px;
+      border-radius: 30px;
+      font-weight: 500;
+    }
+    h3 {
+      font-size: 1.4rem;
+      color: #0b3b5c;
+      margin: 30px 0 15px 0;
+      padding-left: 10px;
+      border-left: 6px solid #2c7da0;
+    }
+    .derivation-step {
+      margin-left: 25px;
+      counter-reset: step-counter;
+    }
+    .step {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 35px;
+    }
+    .step:before {
+      content: counter(step-counter) ".";
+      counter-increment: step-counter;
+      position: absolute;
+      left: 0;
+      font-weight: 600;
+      color: #2c7da0;
+    }
+    .formula {
+      background: #f1f8fe;
+      padding: 10px 18px;
+      border-left: 4px solid #1e6f9f;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 1.2rem;
+      margin: 15px 0;
+      border-radius: 0 10px 10px 0;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .formula span {
+      font-weight: 600;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    th {
+      background: #1e4a6b;
+      color: white;
+      font-weight: 600;
+      padding: 12px 10px;
+      text-align: left;
+    }
+    td {
+      background: white;
+      padding: 10px 12px;
+      border: 1px solid #cbd5e1;
+      vertical-align: top;
+    }
+    tr:nth-child(even) td {
+      background-color: #f8fafc;
+    }
+    ul, ol {
+      margin: 10px 0 15px 25px;
+    }
+    li {
+      margin: 6px 0;
+    }
+    .note-box {
+      background: #fff9e6;
+      border-left: 5px solid #f4b740;
+      padding: 14px 20px;
+      margin: 25px 0;
+      border-radius: 8px;
+    }
+    .note-box strong {
+      color: #b45b0f;
+    }
+    .term {
+      font-weight: 600;
+      color: #0c4a6e;
+    }
+    .small-math {
+      font-size: 1.1rem;
+    }
+    .vector {
+      font-weight: 600;
+      text-decoration: overline;  /* simple vector indication */
+    }
+    hr {
+      border: none;
+      border-top: 2px dashed #b9d7e8;
+      margin: 35px 0;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 15px; }
+      .formula { font-size: 1rem; white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>🧲 Unit 3: Magnetism & Magnetic Effects of Current</h1>
+  <h2>Long Answer Questions (5 marks) – Complete key notes</h2>
+
+  <!-- Q1 -->
+  <h3>1. Discuss Earth's magnetic field in detail.</h3>
+  <ul>
+    <li><span class="term">Introduction:</span> Earth behaves as a giant bar magnet. The north pole of a compass needle points toward geographic north, which is actually the magnetic south pole.</li>
+    <li><span class="term">Geomagnetism:</span> Branch of physics dealing with Earth's magnetic field.</li>
+  </ul>
+  <p><strong>Three magnetic elements (required to specify the field):</strong></p>
+  <ol>
+    <li><span class="term">Magnetic declination (D):</span> Angle between magnetic meridian and geographic meridian. (Chennai: −1°16′)</li>
+    <li><span class="term">Magnetic dip or inclination (I):</span> Angle made by total field <span class="vector">B</span> with horizontal. (Chennai: 14°28′)</li>
+    <li><span class="term">Horizontal component (B<sub>H</sub>):</span> Component along horizontal in magnetic meridian.</li>
+  </ol>
+  <div class="formula">B<sub>H</sub> = B<sub>E</sub> cos I &nbsp;&nbsp; B<sub>V</sub> = B<sub>E</sub> sin I &nbsp;&nbsp; tan I = B<sub>V</sub> / B<sub>H</sub></div>
+  <p><strong>Special cases:</strong></p>
+  <ul>
+    <li><span class="term">At magnetic equator:</span> I = 0°, B<sub>H</sub> = B<sub>E</sub>, B<sub>V</sub> = 0</li>
+    <li><span class="term">At magnetic poles:</span> I = 90°, B<sub>H</sub> = 0, B<sub>V</sub> = B<sub>E</sub></li>
+  </ul>
+  <hr>
+
+  <!-- Q2 -->
+  <h3>2. Magnetic field due to infinitely long straight conductor (Biot‑Savart law).</h3>
+  <div class="derivation-step">
+    <div class="step">Consider an infinitely long wire YY' with current I. Point P at perpendicular distance a.</div>
+    <div class="step">Take a small element dl (AB). Biot‑Savart law: dB = (µ₀/4π)·(I dl sinθ)/r².</div>
+    <div class="step">From geometry: dl sinθ = r dφ, and cosφ = a/r ⇒ r = a / cosφ.</div>
+    <div class="step">Substitute: dB = (µ₀/4π)·(I / a) cosφ dφ. Direction into page (⊗).</div>
+    <div class="step">Integrate φ from −π/2 to π/2: B = (µ₀ I / 4π a) [sinφ] from −π/2 to π/2 = (µ₀ I / 4π a)·(1 − (−1)).</div>
+  </div>
+  <div class="formula">B = µ₀ I / (2π a) &nbsp;&nbsp; (or B = µ₀ I / (2π r))</div>
+  <p>Direction: concentric circles around wire (right‑hand thumb rule).</p>
+  <hr>
+
+  <!-- Q3 -->
+  <h3>3. Magnetic field on the axis of a circular coil (Biot‑Savart).</h3>
+  <div class="derivation-step">
+    <div class="step">Circular coil radius R, current I. Point P on axis at distance z from centre.</div>
+    <div class="step">Consider element dl at C. dB = (µ₀/4π)·(I dl)/r² (θ = 90°).</div>
+    <div class="step">Resolve: horizontal components cancel, vertical components add. dB<sub>z</sub> = dB sinφ.</div>
+    <div class="step">sinφ = R / √(R²+z²) , r² = R²+z².</div>
+    <div class="step">Integrate over whole loop: B = ∫ (µ₀ I / 4π)·(R dl) / (R²+z²)<sup>3/2</sup>.</div>
+    <div class="step">∫ dl = 2πR ⇒ B = (µ₀ I R²) / [2(R²+z²)<sup>3/2</sup>].</div>
+  </div>
+  <div class="formula">For N turns: B = (µ₀ N I R²) / [2(R²+z²)<sup>3/2</sup>]</div>
+  <p>At centre (z=0): B = µ₀ N I / (2R).</p>
+  <hr>
+
+  <!-- Q4 -->
+  <h3>4. Torque on a magnetic needle (bar magnet) in uniform field.</h3>
+  <div class="derivation-step">
+    <div class="step">Bar magnet length 2l, pole strength q<sub>m</sub>, magnetic moment p<sub>m</sub> = q<sub>m</sub>·2l.</div>
+    <div class="step">Forces: on N‑pole F<sub>N</sub> = q<sub>m</sub>B, on S‑pole F<sub>S</sub> = –q<sub>m</sub>B. Net force = 0.</div>
+    <div class="step">These forces form a couple. Torque about centre: τ = force × perpendicular distance.</div>
+    <div class="step">τ = (l sinθ)·(q<sub>m</sub>B) + (l sinθ)·(q<sub>m</sub>B) = 2l q<sub>m</sub>B sinθ = p<sub>m</sub> B sinθ.</div>
+  </div>
+  <div class="formula">τ = p<sub>m</sub> B sinθ &nbsp; (vector: <span class="vector">τ</span> = <span class="vector">p<sub>m</sub></span> × <span class="vector">B</span>)</div>
+  <p>Maximum at θ = 90°, zero at θ = 0° or 180°. Torque aligns magnet with field.</p>
+  <hr>
+
+  <!-- Q5 -->
+  <h3>5. Magnetic field on axial line of a bar magnet.</h3>
+  <div class="derivation-step">
+    <div class="step">Magnet NS, length 2l, pole strength q<sub>m</sub>. Point C on axis at distance r from centre.</div>
+    <div class="step">Field due to N‑pole at C: B<sub>N</sub> = (µ₀/4π)·q<sub>m</sub>/(r−l)² (away from N).</div>
+    <div class="step">Field due to S‑pole at C: B<sub>S</sub> = – (µ₀/4π)·q<sub>m</sub>/(r+l)² (toward S).</div>
+    <div class="step">Net B = B<sub>N</sub> + B<sub>S</sub> = (µ₀ q<sub>m</sub>/4π)[1/(r−l)² – 1/(r+l)²].</div>
+    <div class="step">Simplify using (r+l)² − (r−l)² = 4rl ⇒ B = (µ₀/4π)·[4r l q<sub>m</sub> / (r²−l²)²].</div>
+    <div class="step">p<sub>m</sub> = q<sub>m</sub>·2l ⇒ B = (µ₀/4π)·[2r p<sub>m</sub> / (r²−l²)²].</div>
+    <div class="step">For r ≫ l: (r²−l²)² ≈ r⁴ ⇒ B<sub>axial</sub> = (µ₀/4π)·(2p<sub>m</sub>/r³).</div>
+  </div>
+  <div class="formula">B<sub>axial</sub> = (µ₀/4π)·(2p<sub>m</sub>/r³) &nbsp; (direction along <span class="vector">p<sub>m</sub></span>)</div>
+  <hr>
+
+  <!-- Q6 -->
+  <h3>6. Magnetic field on equatorial line of a bar magnet.</h3>
+  <div class="derivation-step">
+    <div class="step">Same magnet. Point C on equatorial line at distance r from centre.</div>
+    <div class="step">Distance to each pole: r' = √(r²+l²). Field magnitudes equal: B<sub>N</sub> = B<sub>S</sub> = (µ₀/4π)·q<sub>m</sub>/r'².</div>
+    <div class="step">Resolve: horizontal components cancel, vertical components add opposite → net B = –2B<sub>N</sub>cosθ <span class="vector">î</span>.</div>
+    <div class="step">cosθ = l/r' ⇒ B = – (µ₀/4π)·(2q<sub>m</sub> l)/(r²+l²)<sup>3/2</sup>.</div>
+    <div class="step">p<sub>m</sub> = 2q<sub>m</sub>l ⇒ B = – (µ₀/4π)·p<sub>m</sub>/(r²+l²)<sup>3/2</sup>.</div>
+    <div class="step">For r ≫ l: B<sub>equatorial</sub> = – (µ₀/4π)·(p<sub>m</sub>/r³).</div>
+  </div>
+  <div class="formula">B<sub>eq</sub> = (µ₀/4π)·(p<sub>m</sub>/r³) &nbsp; (magnitude), direction opposite <span class="vector">p<sub>m</sub></span>.</div>
+  <p><span class="term">Relation:</span> B<sub>axial</sub> = 2 B<sub>equatorial</sub>.</p>
+  <hr>
+
+  <!-- Q7 -->
+  <h3>7. Magnetic field due to long straight conductor using Ampere's circuital law.</h3>
+  <div class="derivation-step">
+    <div class="step">Consider infinite straight wire with current I. By symmetry, B is tangential, constant on circle radius r.</div>
+    <div class="step">Choose circular Amperian loop of radius r. Ampere's law: ∮ B·dl = µ₀ I<sub>enclosed</sub>.</div>
+    <div class="step">B parallel dl ⇒ ∮ B dl = B·(2πr) = µ₀ I.</div>
+  </div>
+  <div class="formula">B = µ₀ I / (2πr)</div>
+  <p>Same as Biot‑Savart result. Vector: <span class="vector">B</span> = (µ₀ I / 2πr) <span class="vector">n</span> (tangent direction).</p>
+  <hr>
+
+  <!-- Q8 -->
+  <h3>8. Working of cyclotron – principle, construction, working, limitations.</h3>
+  <p><span class="term">Principle:</span> Charged particle moving ⊥ to magnetic field experiences Lorentz force that provides centripetal force → circular motion.</p>
+  <p><span class="term">Construction:</span></p>
+  <ul>
+    <li>Two hollow D‑shaped electrodes (Dees) in vacuum.</li>
+    <li>Uniform magnetic field ⊥ to plane of Dees.</li>
+    <li>High‑frequency oscillator connected to Dees.</li>
+    <li>Source at centre, deflector plate at edge.</li>
+  </ul>
+  <p><span class="term">Working:</span></p>
+  <ol>
+    <li>Ion from source accelerated towards Dee (negative at that instant).</li>
+    <li>Inside Dee, only magnetic field acts: radius r = mv/qB.</li>
+    <li>After half‑circle, polarity reverses → ion accelerated across gap.</li>
+    <li>Velocity increases → radius increases → spiral path.</li>
+    <li>Finally beam extracted by deflector.</li>
+  </ol>
+  <div class="formula">Cyclotron frequency f = qB/(2πm) &nbsp;&nbsp; Time period T = 2πm/(qB)</div>
+  <div class="formula">Kinetic energy = q²B²r²/(2m)</div>
+  <p><span class="term">Resonance condition:</span> oscillator frequency equals cyclotron frequency.</p>
+  <p><span class="term">Limitations:</span> relativistic mass increase at high speed; electrons not accelerated (very high frequency); neutral particles cannot be accelerated.</p>
+  <hr>
+
+  <!-- Q9 -->
+  <h3>9. Tangent law and Tangent Galvanometer.</h3>
+  <p><span class="term">Tangent law:</span> When a magnet is freely suspended in two mutually perpendicular uniform magnetic fields, it rests along the resultant: B = B<sub>H</sub> tan θ.</p>
+  <p><span class="term">Tangent Galvanometer (TG):</span> moving‑magnet type, works on tangent law.</p>
+  <p><span class="term">Construction:</span> circular coil (N turns, radius R), compass box with magnetic needle, aluminium pointer, mirror to avoid parallax.</p>
+  <p><span class="term">Theory:</span> B due to coil = µ₀ N I / (2R). At equilibrium: µ₀ N I/(2R) = B<sub>H</sub> tan θ ⇒ B<sub>H</sub> = (µ₀ N / 2R)·(I / tan θ).</p>
+  <p><span class="term">Precautions:</span> no magnetic materials nearby, coil vertical in magnetic meridian, pointer reads 0°‑0° with no current.</p>
+  <p><span class="term">Sensitivity:</span> most sensitive at θ = 45°, readings taken between 30° and 60°.</p>
+  <hr>
+
+  <!-- Q10 -->
+  <h3>10. Torque on a current‑carrying coil in a magnetic field.</h3>
+  <div class="derivation-step">
+    <div class="step">Rectangular coil PQRS (length a, breadth b), N turns, current I, placed in uniform B.</div>
+    <div class="step">Forces on PQ and RS: F = I a B, opposite directions, form a couple.</div>
+    <div class="step">Torque on PQ about axis = (b/2 sinθ)·I a B ; same for RS.</div>
+    <div class="step">Total τ = 2 × (b/2 sinθ) I a B = I a b B sinθ = I A B sinθ (A = ab).</div>
+    <div class="step">For N turns: τ = N I A B sinθ.</div>
+  </div>
+  <div class="formula">τ = N I A B sinθ &nbsp; (vector: <span class="vector">τ</span> = (N I <span class="vector">A</span>) × <span class="vector">B</span>)</div>
+  <p>Using magnetic moment <span class="vector">p<sub>m</sub></span> = N I <span class="vector">A</span> ⇒ τ = p<sub>m</sub> B sinθ.</p>
+  <p>Maximum at θ = 90°, zero at θ = 0° or 180°.</p>
+  <hr>
+
+  <!-- Q11 -->
+  <h3>11. Conversion of galvanometer into ammeter and voltmeter.</h3>
+  <p><strong>Into Ammeter:</strong> low resistance (shunt S) in parallel.</p>
+  <div class="formula">S = I<sub>g</sub> R<sub>g</sub> / (I − I<sub>g</sub>) &nbsp;&nbsp; R<sub>a</sub> = R<sub>g</sub>S/(R<sub>g</sub>+S)</div>
+  <p>For n‑fold range (I = n I<sub>g</sub>): S = R<sub>g</sub>/(n−1).</p>
+  <p><strong>Into Voltmeter:</strong> high resistance R<sub>h</sub> in series.</p>
+  <div class="formula">R<sub>h</sub> = V/I<sub>g</sub> − R<sub>g</sub> &nbsp;&nbsp; R<sub>v</sub> = R<sub>g</sub> + R<sub>h</sub></div>
+  <p>For n‑fold range (V = n I<sub>g</sub>R<sub>g</sub>): R<sub>h</sub> = (n−1)R<sub>g</sub>.</p>
+  <table>
+    <tr><th>Parameter</th><th>Ammeter</th><th>Voltmeter</th></tr>
+    <tr><td>Connection</td><td>series</td><td>parallel</td></tr>
+    <tr><td>Resistance</td><td>very low (ideal 0)</td><td>very high (ideal ∞)</td></tr>
+    <tr><td>Conversion</td><td>shunt in parallel</td><td>series multiplier</td></tr>
+  </table>
+  <hr>
+
+  <!-- Q12 -->
+  <h3>12. Magnetic field inside/outside a long solenoid (Ampere's law).</h3>
+  <div class="derivation-step">
+    <div class="step">Solenoid length L, N turns, current I. Turns per unit length n = N/L.</div>
+    <div class="step">Consider rectangular Amperian loop abcd of length h. Along ab (inside): B parallel; bc and da: B ⟂ dl ⇒ zero; cd (outside): B ≈ 0.</div>
+    <div class="step">∮ B·dl = B·h = µ₀ × (current enclosed). Current enclosed = n·h·I.</div>
+    <div class="step">Thus B·h = µ₀ n h I ⇒ B = µ₀ n I.</div>
+  </div>
+  <div class="formula">B<sub>inside</sub> = µ₀ n I &nbsp;&nbsp; (uniform, axial direction)</div>
+  <p>Outside solenoid: B ≈ 0. With iron core: B = µ₀ µ<sub>r</sub> n I.</p>
+  <hr>
+
+  <!-- Q13 -->
+  <h3>13. Force between two parallel current‑carrying conductors.</h3>
+  <div class="derivation-step">
+    <div class="step">Two long parallel wires A and B, separation r, currents I₁, I₂ (same direction).</div>
+    <div class="step">Field at B due to A: B₁ = µ₀ I₁/(2πr) (into page ⊗).</div>
+    <div class="step">Force on length l of B: F = I₂ l B₁ sin90° = I₂ l (µ₀ I₁/(2πr)).</div>
+    <div class="step">Direction: using left‑hand rule, force on B is toward A (attractive).</div>
+    <div class="step">Similarly, force on A toward B. Force per unit length: F/l = µ₀ I₁ I₂/(2πr).</div>
+  </div>
+  <div class="formula">F/l = µ₀ I₁ I₂ / (2πr)</div>
+  <p>Same direction → attract; opposite direction → repel.</p>
+  <p><span class="term">Definition of ampere:</span> 1 A is that constant current which, when flowing in two infinitely long parallel conductors 1 m apart in vacuum, produces a force of 2×10⁻⁷ N per metre.</p>
+  <hr>
+
+  <!-- Q14 -->
+  <h3>14. Magnetic Lorentz force – account and motion in field.</h3>
+  <p><span class="term">Lorentz force:</span> <span class="vector">F</span> = q(<span class="vector">E</span> + <span class="vector">v</span>×<span class="vector">B</span>). Magnetic part: <span class="vector">F<sub>m</sub></span> = q(<span class="vector">v</span>×<span class="vector">B</span>).</p>
+  <div class="formula">F<sub>m</sub> = q v B sinθ</div>
+  <ul>
+    <li>Direction ⊥ to both <span class="vector">v</span> and <span class="vector">B</span> (right‑hand rule).</li>
+    <li>Work done by magnetic force = 0 (power = 0).</li>
+  </ul>
+  <p><span class="term">Motion:</span></p>
+  <ul>
+    <li><strong>v ⟂ B:</strong> circular path. Radius r = mv/(qB); period T = 2πm/(qB) (independent of speed).</li>
+    <li><strong>v at angle θ:</strong> helical path with pitch p = v<sub>∥</sub>·T = (v cosθ)·(2πm/qB).</li>
+  </ul>
+  <p><span class="term">Definition of tesla:</span> 1 T = 1 N A⁻¹ m⁻¹.</p>
+  <hr>
+
+  <!-- Q15 -->
+  <h3>15. Compare properties of soft and hard ferromagnetic materials.</h3>
+  <table>
+    <tr><th>Property</th><th>Soft ferromagnetic</th><th>Hard ferromagnetic</th></tr>
+    <tr><td>Magnetisation after field removal</td><td>disappears</td><td>persists</td></tr>
+    <tr><td>Area of hysteresis loop</td><td>small</td><td>large</td></tr>
+    <tr><td>Retentivity</td><td>low</td><td>high</td></tr>
+    <tr><td>Coercivity</td><td>low</td><td>high</td></tr>
+    <tr><td>Permeability / susceptibility</td><td>high</td><td>low</td></tr>
+    <tr><td>Hysteresis loss</td><td>less</td><td>more</td></tr>
+    <tr><td>Uses</td><td>electromagnets, transformer cores</td><td>permanent magnets</td></tr>
+    <tr><td>Examples</td><td>soft iron, mumetal</td><td>carbon steel, alnico</td></tr>
+  </table>
+  <p>Hysteresis: lagging of B behind H; energy loss = area of loop.</p>
+  <hr>
+
+  <!-- Q16 -->
+  <h3>16. Force on a current‑carrying conductor in magnetic field – derivation.</h3>
+  <div class="derivation-step">
+    <div class="step">Conductor length dl, area A, free electron density n, drift velocity v<sub>d</sub>. Current I = n e A v<sub>d</sub>.</div>
+    <div class="step">Force on one electron: f = –e (v<sub>d</sub>×B).</div>
+    <div class="step">Number of electrons in element = n A dl. Total force dF = (n A dl)·(–e v<sub>d</sub>×B).</div>
+    <div class="step">But –n e A v<sub>d</sub> dl = I dl (since current direction opposite electron flow). Hence dF = I dl × B.</div>
+    <div class="step">For straight conductor length l: F = I l B sinθ.</div>
+  </div>
+  <div class="formula"><span class="vector">F</span> = I <span class="vector">l</span> × <span class="vector">B</span> &nbsp; (magnitude F = B I l sinθ)</div>
+  <p>Fleming's left‑hand rule: thumb – force, forefinger – field, middle finger – current.</p>
+  <hr>
+
+  <!-- Q17 -->
+  <h3>17. Moving coil galvanometer – principle, construction, working.</h3>
+  <p><span class="term">Principle:</span> A current‑carrying coil in a uniform magnetic field experiences torque.</p>
+  <p><span class="term">Construction:</span> Rectangular coil (N turns) wound on soft iron core, suspended between poles of permanent magnet (radial field). Phosphor‑bronze suspension and hair spring provide restoring torque. Mirror for lamp‑scale reading.</p>
+  <p><span class="term">Working:</span> Current I causes deflecting torque τ<sub>d</sub> = N A B I. Suspension wire provides restoring torque τ<sub>r</sub> = K θ. At equilibrium, N A B I = K θ ⇒ I = (K / N A B) θ = G θ (G = galvanometer constant).</p>
+  <div class="formula">I ∝ θ ⇒ linear scale.</div>
+  <p><span class="term">Current sensitivity:</span> I<sub>s</sub> = θ/I = N A B / K.</p>
+  <p><span class="term">Voltage sensitivity:</span> V<sub>s</sub> = θ/V = N A B / (K R<sub>g</sub>).</p>
+  <p>Increasing sensitivity: increase N, B, A; decrease K (use phosphor‑bronze).</p>
+  <hr>
+
+  <!-- end of answers -->
+  <div style="text-align: right; font-style: italic; margin-top: 40px; color: #4b6b7f;">— complete short notes for full 5 marks —</div>
+</div>
+</body>
+</html>
